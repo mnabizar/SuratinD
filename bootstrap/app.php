@@ -13,7 +13,6 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware) {
         $middleware->alias([
             'role' => \App\Http\Middleware\RoleMiddleware::class,
-            'session.timeout' => \App\Http\Middleware\SessionTimeout::class,
         ]);
 
         $middleware->web(append: [
